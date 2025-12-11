@@ -101,6 +101,7 @@ function connectWebSocket() {
       if (msg.is_final) {
         // one turn is done → move it into history with a newline
         assistantText.value += (currentTurnText.value.trim() + "\n");
+        
         currentTurnText.value = "";
       }
     }
